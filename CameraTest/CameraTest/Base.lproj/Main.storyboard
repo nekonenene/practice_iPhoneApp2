@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ipag.ttf">
+            <string>IPAGothic</string>
+            <string>IPAGothic</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4JJ-7G-wZ6">
+            <objects>
+                <tabBarController id="UWr-ic-4hq" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6PI-k9-Ieg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TwX-jq-Urv"/>
+                        <segue destination="O6W-qm-o2d" kind="relationship" relationship="viewControllers" id="XRR-PV-t3t"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" id="AE9-cT-4mx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUg-Um-M9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="277"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="t6P-Vz-mA9">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Y0-QX-2kp"/>
+                                    <constraint firstAttribute="width" constant="320" id="pd2-Lm-JIP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VuL-Ok-P1v"/>
+                                </connections>
+                            </adBannerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-4C-ayZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-s9-Ymv">
+                                        <rect key="frame" x="107" y="96" width="160" height="45"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="C14-ga-DbW"/>
+                                            <constraint firstAttribute="height" constant="45" id="kmK-RQ-cef"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IPAGothic" family="IPAGothic" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="テストです" backgroundImage="button1.png">
+                                            <color key="titleColor" red="0.21729793848167545" green="0.18586983200099277" blue="0.20786863894021518" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toCameraViewButton:" destination="BYZ-38-t0r" eventType="touchDown" id="GYe-Ju-WqO"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGU-zR-2Qb">
+                                        <rect key="frame" x="137" y="541" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="2hw-HQ-2C3"/>
+                                            <constraint firstAttribute="width" secondItem="MGU-zR-2Qb" secondAttribute="height" multiplier="1:1" id="ChX-Wd-Yo0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MGU-zR-2Qb" secondAttribute="bottom" constant="80" id="4Hr-kw-Org"/>
+                                    <constraint firstItem="MGU-zR-2Qb" firstAttribute="top" secondItem="NTA-s9-Ymv" secondAttribute="bottom" constant="400" id="4LX-Fc-Wpk"/>
+                                    <constraint firstItem="NTA-s9-Ymv" firstAttribute="top" secondItem="NCh-4C-ayZ" secondAttribute="top" constant="96" id="TPt-J6-F1l"/>
+                                    <constraint firstAttribute="trailing" secondItem="NTA-s9-Ymv" secondAttribute="trailing" constant="108" id="hvh-a5-np4"/>
+                                    <constraint firstItem="MGU-zR-2Qb" firstAttribute="centerX" secondItem="NCh-4C-ayZ" secondAttribute="centerX" id="mbH-Hf-qo5"/>
+                                    <constraint firstItem="NTA-s9-Ymv" firstAttribute="centerX" secondItem="NCh-4C-ayZ" secondAttribute="centerX" id="yOi-dQ-DRO"/>
+                                </constraints>
+                            </scrollView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P29-xn-mcE">
+                                <rect key="frame" x="0.0" y="568" width="375" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.75132935209424079" green="0.74220037159992358" blue="0.4284966224291884" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <tabBarItem title="TOP" image="HOME.png" badgeValue="b" selectedImage="HOME.png" id="l77-oY-f0R" userLabel="toTopLabel" colorLabel="IBBuiltInLabel-Red">
+                                        <inset key="imageInsets" minX="4" minY="8" maxX="4" maxY="4"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" title="CAMERA" image="Camera2.png" selectedImage="Camera2.png" id="pKj-pQ-zfn">
+                                        <inset key="imageInsets" minX="2" minY="1" maxX="4" maxY="5"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.2687801428384774" green="0.65789954365513048" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.78395463010351218" blue="0.19390688972080372" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="P29-xn-mcE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aqz-zq-DWN"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="IRd-G1-A01"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pyk-zo-z6G"/>
+                            <constraint firstItem="t6P-Vz-mA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RVI-6f-DuU"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Urm-Cd-ui2"/>
+                            <constraint firstItem="P29-xn-mcE" firstAttribute="bottom" secondItem="t6P-Vz-mA9" secondAttribute="top" id="Wh7-UQ-mT2"/>
+                            <constraint firstAttribute="trailing" secondItem="NCh-4C-ayZ" secondAttribute="trailing" id="btM-au-zC4"/>
+                            <constraint firstItem="P29-xn-mcE" firstAttribute="top" secondItem="NCh-4C-ayZ" secondAttribute="bottom" id="eYJ-wq-1TX"/>
+                            <constraint firstAttribute="bottom" secondItem="t6P-Vz-mA9" secondAttribute="bottom" id="fmx-2y-khh"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="szP-Oo-geu"/>
+                            <constraint firstAttribute="trailing" secondItem="P29-xn-mcE" secondAttribute="trailing" id="u5V-Sw-cd3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="HOME" image="HOME.png" selectedImage="HOME.png" id="CgT-HK-iUc">
+                        <inset key="imageInsets" minX="4" minY="10" maxX="4" maxY="2"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="LDh-0w-nQk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="adBottom" destination="t6P-Vz-mA9" id="XO2-p8-njp"/>
+                        <outlet property="toCamerViewButton" destination="NTA-s9-Ymv" id="llC-mN-QV5"/>
+                        <outlet property="toCameraTab" destination="pKj-pQ-zfn" id="Ie9-xH-jda"/>
+                        <outlet property="toHomeTab" destination="l77-oY-f0R" id="EnD-AY-ngn"/>
+                        <segue destination="O6W-qm-o2d" kind="modal" identifier="toCameraViewSegue" id="mcP-Ww-cru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564.5" y="313.5"/>
+        </scene>
+        <!--CAMERA-->
+        <scene sceneID="bTP-oV-7a7">
+            <objects>
+                <viewController id="O6W-qm-o2d" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpp-wD-cXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xYF-sN-9DX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPH-VJ-QQw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="n3B-A2-wq0">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9cO-tu-Z0g"/>
+                                    <constraint firstAttribute="height" constant="50" id="b77-cG-kw3"/>
+                                </constraints>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG3-em-vT2">
+                                <rect key="frame" x="107" y="116" width="160" height="45"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PBF-Vv-rzW"/>
+                                    <constraint firstAttribute="width" constant="160" id="xnR-0d-shm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IPAGothic" family="IPAGothic" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="テストです" backgroundImage="button1.png">
+                                    <color key="titleColor" red="0.21729793850000001" green="0.18586983200000001" blue="0.20786863890000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toTopViewButton:" destination="O6W-qm-o2d" eventType="touchDown" id="GZW-eI-Gbu"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGH-Sm-ZoE">
+                                <rect key="frame" x="0.0" y="568" width="375" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.75132935209999996" green="0.74220037159999996" blue="0.42849662240000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <tabBarItem tag="1" title="TOP" image="HOME.png" badgeValue="b" selectedImage="HOME.png" id="zKf-1c-YKz" colorLabel="IBBuiltInLabel-Red" propertyAccessControl="all">
+                                        <inset key="imageInsets" minX="4" minY="8" maxX="4" maxY="4"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="CAMERA" image="Camera2.png" selectedImage="Camera2.png" id="Y8x-jC-mcs">
+                                        <inset key="imageInsets" minX="2" minY="1" maxX="4" maxY="5"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.26878014280000001" green="0.65789954370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.10648939101680902" green="0.15445026178010468" blue="0.058528520253513364" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gG3-em-vT2" firstAttribute="top" secondItem="cPH-VJ-QQw" secondAttribute="top" constant="116" id="MiW-A7-PXs"/>
+                            <constraint firstItem="gG3-em-vT2" firstAttribute="centerX" secondItem="cPH-VJ-QQw" secondAttribute="centerX" id="Suf-fT-IGc"/>
+                            <constraint firstItem="n3B-A2-wq0" firstAttribute="centerX" secondItem="cPH-VJ-QQw" secondAttribute="centerX" id="ZO3-WH-tEp"/>
+                            <constraint firstItem="lGH-Sm-ZoE" firstAttribute="leading" secondItem="cPH-VJ-QQw" secondAttribute="leading" id="e38-Hh-JPk"/>
+                            <constraint firstItem="lGH-Sm-ZoE" firstAttribute="centerX" secondItem="cPH-VJ-QQw" secondAttribute="centerX" id="f3K-bG-jgm"/>
+                            <constraint firstAttribute="bottom" secondItem="n3B-A2-wq0" secondAttribute="bottom" id="ueJ-Bt-lV9"/>
+                            <constraint firstItem="lGH-Sm-ZoE" firstAttribute="bottom" secondItem="n3B-A2-wq0" secondAttribute="top" id="vrr-KB-uAW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="CAMERA" image="Camera2.png" selectedImage="Camera2.png" id="fAp-BA-py9">
+                        <inset key="imageInsets" minX="4" minY="1" maxX="4" maxY="5"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="ZQ5-0B-Jr3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="adBottom" destination="n3B-A2-wq0" id="pmG-vN-0Or"/>
+                        <outlet property="toCameraTab" destination="Y8x-jC-mcs" id="aIT-SX-IIR"/>
+                        <outlet property="toHomeTab" destination="zKf-1c-YKz" id="xYR-5X-24K"/>
+                        <outlet property="toTopViewButton" destination="gG3-em-vT2" id="KGV-i6-y7h"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toTopViewSegue" id="y3J-Rj-iYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jQ-NP-6yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.5" y="313.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="trb-yP-P0l">
+            <objects>
+                <tableViewController id="O8y-dA-54o" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rSA-RF-7mN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gqe-V6-Un9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gqe-V6-Un9" id="Psu-Dz-H4o">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O8y-dA-54o" id="Cvw-JH-d9f"/>
+                            <outlet property="delegate" destination="O8y-dA-54o" id="fXW-eh-wYk"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09J-8g-1NM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.5" y="313.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera2.png" width="50" height="50"/>
+        <image name="HOME.png" width="50" height="50"/>
+        <image name="button1.png" width="100" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TwX-jq-Urv"/>
+        <segue reference="XRR-PV-t3t"/>
+    </inferredMetricsTieBreakers>
+</document>
