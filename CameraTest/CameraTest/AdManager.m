@@ -20,7 +20,7 @@
     @autoreleasepool
     {
         [super viewDidAppear:animated] ;
-        
+        self.view.superview.backgroundColor = [UIColor clearColor] ;
         [self bannerInit :adBottom] ;
     }
 }

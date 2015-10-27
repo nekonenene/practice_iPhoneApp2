@@ -69,6 +69,7 @@
 {
     @autoreleasepool
     {
+        adBottomContainer.backgroundColor = [UIColor clearColor] ;
         banner.delegate = self ;
         [adBottomContainer setHidden:YES] ;
         [banner setHidden:YES] ;
