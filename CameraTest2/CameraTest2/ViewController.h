@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 
 @property IBOutlet UIView *adBottomContainer ;
+
 @end
 
