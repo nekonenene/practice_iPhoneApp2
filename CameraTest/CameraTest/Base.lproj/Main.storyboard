@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ipag.ttf">
@@ -41,8 +42,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-4C-ayZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGU-zR-2Qb">
+                                        <rect key="frame" x="137" y="542" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="2hw-HQ-2C3"/>
+                                            <constraint firstAttribute="width" constant="100" id="w8F-fl-NFa"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-s9-Ymv">
                                         <rect key="frame" x="107" y="96" width="160" height="45"/>
                                         <animations/>
@@ -59,24 +68,36 @@
                                             <action selector="toCameraViewButton:" destination="BYZ-38-t0r" eventType="touchDown" id="GYe-Ju-WqO"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGU-zR-2Qb">
-                                        <rect key="frame" x="137" y="541" width="100" height="100"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="2hw-HQ-2C3"/>
-                                            <constraint firstAttribute="width" constant="100" id="w8F-fl-NFa"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="NTA-s9-Ymv" firstAttribute="top" secondItem="NCh-4C-ayZ" secondAttribute="topMargin" constant="87" id="7f3-1A-cB2"/>
                                     <constraint firstItem="NTA-s9-Ymv" firstAttribute="centerX" secondItem="NCh-4C-ayZ" secondAttribute="centerX" id="82q-YE-8SN"/>
-                                    <constraint firstAttribute="height" constant="568" id="945-nQ-4gl"/>
+                                    <constraint firstAttribute="trailing" secondItem="NTA-s9-Ymv" secondAttribute="trailing" constant="108" id="Dkq-ob-WAt"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="MGU-zR-2Qb" secondAttribute="bottom" constant="-81" id="FwG-ZO-hhy"/>
                                     <constraint firstItem="MGU-zR-2Qb" firstAttribute="centerX" secondItem="NCh-4C-ayZ" secondAttribute="centerX" id="Gqs-y9-1Y7"/>
-                                    <constraint firstItem="MGU-zR-2Qb" firstAttribute="bottom" secondItem="NCh-4C-ayZ" secondAttribute="bottom" constant="100" id="PUh-aw-cCY"/>
+                                    <constraint firstItem="MGU-zR-2Qb" firstAttribute="bottom" secondItem="NCh-4C-ayZ" secondAttribute="bottom" constant="100" id="PUh-aw-cCY">
+                                        <variation key="heightClass=compact" constant="-158"/>
+                                    </constraint>
+                                    <constraint firstItem="MGU-zR-2Qb" firstAttribute="top" secondItem="NTA-s9-Ymv" secondAttribute="bottom" constant="401" id="cbJ-7n-zVh"/>
                                     <constraint firstItem="MGU-zR-2Qb" firstAttribute="top" secondItem="NCh-4C-ayZ" secondAttribute="top" constant="541" id="gV5-P5-RqD"/>
+                                    <constraint firstItem="NTA-s9-Ymv" firstAttribute="leading" secondItem="NCh-4C-ayZ" secondAttribute="leading" constant="108" id="sxj-sU-KUC"/>
                                     <constraint firstItem="NTA-s9-Ymv" firstAttribute="top" secondItem="NCh-4C-ayZ" secondAttribute="top" constant="96" id="vYh-sZ-Bku"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7f3-1A-cB2"/>
+                                        <exclude reference="Dkq-ob-WAt"/>
+                                        <exclude reference="sxj-sU-KUC"/>
+                                        <exclude reference="FwG-ZO-hhy"/>
+                                        <exclude reference="gV5-P5-RqD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Dkq-ob-WAt"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-Aj-SmI">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -84,7 +105,6 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="I25-mD-oco"/>
-                                    <constraint firstAttribute="width" constant="375" id="afw-3n-aeW"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="zta-V1-vkq" kind="embed" id="vvM-6c-siA"/>
@@ -99,8 +119,17 @@
                             <constraint firstItem="Qc2-Aj-SmI" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Ld4-e3-ifH"/>
                             <constraint firstItem="NCh-4C-ayZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pyk-zo-z6G"/>
                             <constraint firstItem="NCh-4C-ayZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Urm-Cd-ui2"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="bottom" secondItem="Qc2-Aj-SmI" secondAttribute="top" id="aEX-H8-4lA">
+                                <variation key="heightClass=compact" constant="183"/>
+                            </constraint>
                             <constraint firstItem="NCh-4C-ayZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="btM-au-zC4"/>
+                            <constraint firstItem="NCh-4C-ayZ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-99" id="cad-P1-fR1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cad-P1-fR1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="HOME" image="HOME.png" selectedImage="HOME.png" id="CgT-HK-iUc" colorLabel="IBBuiltInLabel-Red">
                         <inset key="imageInsets" minX="4" minY="10" maxX="4" maxY="2"/>
@@ -236,6 +265,10 @@
         <scene sceneID="JOV-7d-0oN">
             <objects>
                 <viewController id="zta-V1-vkq" customClass="AdManager" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wxm-Vc-IPk"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5k-vC-wGg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="redraw" id="E4l-Kw-Y1Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
