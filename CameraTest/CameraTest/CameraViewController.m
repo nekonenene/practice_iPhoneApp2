@@ -23,8 +23,6 @@
     @autoreleasepool
     {
         [super viewDidAppear:animated] ;
-    
-        [self bannerInit :adBottom] ;
     }
 }
 

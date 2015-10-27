@@ -11,8 +11,9 @@
 @implementation ViewController
 
 @synthesize adBottom ;
+@synthesize adBottomContainer ;
 
-@synthesize toCamerViewButton ;
+@synthesize toCameraViewButton ;
 @synthesize toTopViewButton ;
 
 @synthesize toHomeTab ;
@@ -28,10 +29,6 @@
     @autoreleasepool
     {
         [super viewDidAppear:animated] ;
-    
-        [self bannerInit :adBottom] ;
-        
-        
     }
 }
 
@@ -40,11 +37,10 @@
 {
     @autoreleasepool
     {
-        [adBottom setHidden:YES] ;
-        [self removeAd:adBottom] ;
+        // [adBottom setHidden:YES] ;
+        // [self removeAd:adBottom] ;
         // IDを指定してSegueを呼び出します。
         [self performSegueWithIdentifier:@"toCameraViewSegue" sender:self];
-        [UIView commitAnimations] ;
     }
 }
 
@@ -58,8 +54,8 @@
         [UIView beginAnimations:@"animateAdBannerOn" context:nil] ;
         [UIView setAnimationDuration:2] ;
         
-        [adBottom setHidden:YES] ;
-        [self removeAd:adBottom] ;
+        // [adBottom setHidden:YES] ;
+        // [self removeAd:adBottom] ;
         
         // [self dismissViewControllerAnimated:YES completion:NULL];
         [self performSegueWithIdentifier:@"toTopViewSegue" sender:self];
@@ -74,6 +70,7 @@
     @autoreleasepool
     {
         banner.delegate = self ;
+        [adBottomContainer setHidden:YES] ;
         [banner setHidden:YES] ;
         
         [self.view addSubview:banner] ;
@@ -89,10 +86,11 @@
         [UIView beginAnimations:@"animateAdBannerOn" context:nil] ;
         [UIView setAnimationDuration:0.3] ;
         
-        [banner setHidden:NO] ;
+        [adBottomContainer setHidden:NO] ;
         
-        NSLog(@"バナーは表示されています") ;
         [UIView commitAnimations] ;
+        [banner setHidden:NO] ;
+        NSLog(@"バナーは表示されています") ;
     }
 }
 
@@ -101,6 +99,7 @@
 {
     @autoreleasepool
     {
+        [adBottomContainer setHidden:YES] ;
         [banner setHidden:YES] ;
         [banner removeFromSuperview] ;
         banner.delegate = nil ;
@@ -117,9 +116,10 @@
             [UIView beginAnimations:@"animateAddBannerOff" context:nil] ;
             [UIView setAnimationDuration:0.3] ;
             
-            NSLog(@"!!!%@!!! %@ code : %ld \n", error, error.domain, (long)error.code) ;
+            [adBottomContainer setHidden:YES] ;
             [banner setHidden:YES] ;
             [UIView commitAnimations] ;
+            NSLog(@"!!!%@!!! %@ code : %ld \n", error, error.domain, (long)error.code) ;
         }
     }
 }

@@ -15,11 +15,13 @@
     ADBannerView *adBottom ;
 }
 @property (nonatomic, retain) IBOutlet ADBannerView *adBottom ;
-@property IBOutlet UIButton *toCamerViewButton ;
+@property IBOutlet UIButton *toCameraViewButton ;
 @property IBOutlet UIButton *toTopViewButton ;
 
 @property IBOutlet UITabBarItem *toHomeTab ;
 @property IBOutlet UITabBarItem *toCameraTab ;
+
+@property IBOutlet UIView *adBottomContainer ;
 
 - (IBAction)toCameraViewButton:(id)sender ;
 - (IBAction)toTopViewButton:(id)sender ;

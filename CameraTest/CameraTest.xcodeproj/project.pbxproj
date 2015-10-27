@@ -22,6 +22,8 @@
 		B687D74F1BDDDB4A00038139 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B687D74E1BDDDB4A00038139 /* CameraViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B687D7511BDDFD2700038139 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = B687D7501BDDFD2700038139 /* HOME.png */; settings = {ASSET_TAGS = (); }; };
 		B6A61D351BDE22B10011B62B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A61D341BDE22B10011B62B /* UIKit.framework */; };
+		B6A61DBB1BDE36C30011B62B /* Camera_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A61DBA1BDE36C30011B62B /* Camera_red.png */; settings = {ASSET_TAGS = (); }; };
+		B6CA99911BDF0EB20069C052 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CA99901BDF0EB20069C052 /* AdManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,9 @@
 		B687D74E1BDDDB4A00038139 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		B687D7501BDDFD2700038139 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 		B6A61D341BDE22B10011B62B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B6A61DBA1BDE36C30011B62B /* Camera_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera_red.png; sourceTree = "<group>"; };
+		B6CA998F1BDF0EB20069C052 /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdManager.h; sourceTree = "<group>"; };
+		B6CA99901BDF0EB20069C052 /* AdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,8 @@
 				B687D71A1BDDB75700038139 /* ViewController.h */,
 				B687D71B1BDDB75700038139 /* ViewController.m */,
 				B687D71D1BDDB75700038139 /* Main.storyboard */,
+				B6CA998F1BDF0EB20069C052 /* AdManager.h */,
+				B6CA99901BDF0EB20069C052 /* AdManager.m */,
 				B687D74D1BDDDB4A00038139 /* CameraViewController.h */,
 				B687D74E1BDDDB4A00038139 /* CameraViewController.m */,
 				B687D7201BDDB75700038139 /* Assets.xcassets */,
@@ -141,6 +148,7 @@
 				B687D7491BDDC6EC00038139 /* button1.png */,
 				B687D7501BDDFD2700038139 /* HOME.png */,
 				B6416E091BDDFFBA007EE5E1 /* Camera2.png */,
+				B6A61DBA1BDE36C30011B62B /* Camera_red.png */,
 				B687D74B1BDDC80F00038139 /* ipag.ttf */,
 				B687D7151BDDB75700038139 /* main.m */,
 			);
@@ -273,6 +281,7 @@
 				B687D74C1BDDC92F00038139 /* ipag.ttf in Resources */,
 				B687D7241BDDB75700038139 /* LaunchScreen.storyboard in Resources */,
 				B687D7211BDDB75700038139 /* Assets.xcassets in Resources */,
+				B6A61DBB1BDE36C30011B62B /* Camera_red.png in Resources */,
 				B687D71F1BDDB75700038139 /* Main.storyboard in Resources */,
 				B687D74A1BDDC6EC00038139 /* button1.png in Resources */,
 				B6416E0A1BDDFFBA007EE5E1 /* Camera2.png in Resources */,
@@ -303,6 +312,7 @@
 				B687D71C1BDDB75700038139 /* ViewController.m in Sources */,
 				B687D74F1BDDDB4A00038139 /* CameraViewController.m in Sources */,
 				B687D7191BDDB75700038139 /* AppDelegate.m in Sources */,
+				B6CA99911BDF0EB20069C052 /* AdManager.m in Sources */,
 				B687D7161BDDB75700038139 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
