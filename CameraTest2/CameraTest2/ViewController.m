@@ -8,11 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
+
+@synthesize adBottomContainer ;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
