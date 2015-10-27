@@ -19,6 +19,7 @@
 		B6CA99D51BDF24AE0069C052 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CA99D41BDF24AE0069C052 /* AdManager.m */; settings = {ASSET_TAGS = (); }; };
 		B6CA99D71BDF27830069C052 /* Camera_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CA99D61BDF27830069C052 /* Camera_red.png */; settings = {ASSET_TAGS = (); }; };
 		B6D0CDB01BDF2D420046C7F0 /* Camera3_5_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0CDAF1BDF2D420046C7F0 /* Camera3_5_2x.png */; settings = {ASSET_TAGS = (); }; };
+		B6D0CDB61BDF35E60046C7F0 /* Recommend_3_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0CDB51BDF35E60046C7F0 /* Recommend_3_2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B6CA99D41BDF24AE0069C052 /* AdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdManager.m; sourceTree = "<group>"; };
 		B6CA99D61BDF27830069C052 /* Camera_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera_red.png; sourceTree = "<group>"; };
 		B6D0CDAF1BDF2D420046C7F0 /* Camera3_5_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera3_5_2x.png; sourceTree = "<group>"; };
+		B6D0CDB51BDF35E60046C7F0 /* Recommend_3_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recommend_3_2x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				B6CA999F1BDF21DC0069C052 /* main.m */,
 				B6CA99D61BDF27830069C052 /* Camera_red.png */,
 				B6D0CDAF1BDF2D420046C7F0 /* Camera3_5_2x.png */,
+				B6D0CDB51BDF35E60046C7F0 /* Recommend_3_2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D0CDB61BDF35E60046C7F0 /* Recommend_3_2x.png in Resources */,
 				B6CA99D71BDF27830069C052 /* Camera_red.png in Resources */,
 				B6CA99AE1BDF21DC0069C052 /* LaunchScreen.storyboard in Resources */,
 				B6CA99AB1BDF21DC0069C052 /* Assets.xcassets in Resources */,

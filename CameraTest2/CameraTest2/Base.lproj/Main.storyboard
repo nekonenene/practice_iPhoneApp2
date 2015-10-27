@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="-21" y="152"/>
         </scene>
-        <!--View Controller-->
+        <!--おすすめ-->
         <scene sceneID="EFs-13-XIg">
             <objects>
                 <viewController id="WAx-O4-h1Q" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                             <constraint firstItem="3xP-Tz-wgV" firstAttribute="centerY" secondItem="RhO-KX-OrC" secondAttribute="centerY" id="gkw-Nq-zfa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="J0H-zz-ivk"/>
+                    <tabBarItem key="tabBarItem" title="おすすめ" image="Recommend_3_2x.png" selectedImage="Recommend_3_2x.png" id="J0H-zz-ivk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzn-WY-9YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,8 +144,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="画面２" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLK-17-rsQ">
-                                <rect key="frame" x="85" y="236" width="132" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画面２" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLK-17-rsQ">
+                                <rect key="frame" x="94" y="240" width="132" height="89"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="Fnp-vH-Ci0"/>
@@ -308,5 +308,6 @@
     </scenes>
     <resources>
         <image name="Camera3_5_2x.png" width="50" height="50"/>
+        <image name="Recommend_3_2x.png" width="50" height="50"/>
     </resources>
 </document>
