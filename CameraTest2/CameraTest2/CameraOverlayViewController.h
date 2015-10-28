@@ -11,4 +11,9 @@
 
 @interface CameraOverlayViewController : ViewController
 
+@property UIButton *testButton ;
+
+- (IBAction)testButtonTapped:(id)sender ;
+- (id)initWithFrame:(CGRect)frame ;
+
 @end

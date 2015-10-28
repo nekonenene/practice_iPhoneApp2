@@ -90,7 +90,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="showcameraController" destination="WAx-O4-h1Q" eventType="touchDown" id="6of-Q2-PaZ"/>
+                                    <action selector="showCameraController" destination="WAx-O4-h1Q" eventType="touchDown" id="zzw-PX-MGW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,7 +242,7 @@
         <!--トップ-->
         <scene sceneID="RIm-Tv-fTG">
             <objects>
-                <viewController title="トップ" id="DYP-dn-5bp" sceneMemberID="viewController">
+                <viewController title="トップ" id="DYP-dn-5bp" customClass="CameraAvFoundation" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DcO-Py-uDX"/>
                         <viewControllerLayoutGuide type="bottom" id="S0Z-zb-a8T"/>

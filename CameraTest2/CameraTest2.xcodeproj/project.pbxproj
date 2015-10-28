@@ -10,6 +10,7 @@
 		B60977BD1BE0ACDA003A5CB3 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60977BC1BE0ACDA003A5CB3 /* CameraOverlayView.xib */; settings = {ASSET_TAGS = (); }; };
 		B60977BF1BE0AD2B003A5CB3 /* penta.png in Resources */ = {isa = PBXBuildFile; fileRef = B60977BE1BE0AD2B003A5CB3 /* penta.png */; settings = {ASSET_TAGS = (); }; };
 		B60977C21BE0AEDF003A5CB3 /* CameraOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60977C11BE0AEDF003A5CB3 /* CameraOverlayViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B631B2591BE0CC28004AF916 /* CameraAvFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B631B2581BE0CC28004AF916 /* CameraAvFoundation.m */; settings = {ASSET_TAGS = (); }; };
 		B69354471BE05DF200B0CCF0 /* StartCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B69354461BE05DF200B0CCF0 /* StartCamera.m */; settings = {ASSET_TAGS = (); }; };
 		B69354491BE0680D00B0CCF0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69354481BE0680D00B0CCF0 /* AVFoundation.framework */; };
 		B6CA99A01BDF21DC0069C052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CA999F1BDF21DC0069C052 /* main.m */; };
@@ -50,6 +51,8 @@
 		B60977BE1BE0AD2B003A5CB3 /* penta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penta.png; sourceTree = "<group>"; };
 		B60977C01BE0AEDF003A5CB3 /* CameraOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlayViewController.h; sourceTree = "<group>"; };
 		B60977C11BE0AEDF003A5CB3 /* CameraOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayViewController.m; sourceTree = "<group>"; };
+		B631B2571BE0CC28004AF916 /* CameraAvFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraAvFoundation.h; sourceTree = "<group>"; };
+		B631B2581BE0CC28004AF916 /* CameraAvFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraAvFoundation.m; sourceTree = "<group>"; };
 		B69354451BE05DF200B0CCF0 /* StartCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartCamera.h; sourceTree = "<group>"; };
 		B69354461BE05DF200B0CCF0 /* StartCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartCamera.m; sourceTree = "<group>"; };
 		B69354481BE0680D00B0CCF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -139,11 +142,13 @@
 				B6CA99D41BDF24AE0069C052 /* AdManager.m */,
 				B6D0CDB71BDF4F400046C7F0 /* FavoritesTableViewController.h */,
 				B6D0CDB81BDF4F400046C7F0 /* FavoritesTableViewController.m */,
-				B60977BC1BE0ACDA003A5CB3 /* CameraOverlayView.xib */,
 				B60977C01BE0AEDF003A5CB3 /* CameraOverlayViewController.h */,
 				B60977C11BE0AEDF003A5CB3 /* CameraOverlayViewController.m */,
 				B69354451BE05DF200B0CCF0 /* StartCamera.h */,
 				B69354461BE05DF200B0CCF0 /* StartCamera.m */,
+				B631B2571BE0CC28004AF916 /* CameraAvFoundation.h */,
+				B631B2581BE0CC28004AF916 /* CameraAvFoundation.m */,
+				B60977BC1BE0ACDA003A5CB3 /* CameraOverlayView.xib */,
 				B6CA99A71BDF21DC0069C052 /* Main.storyboard */,
 				B6CA99AA1BDF21DC0069C052 /* Assets.xcassets */,
 				B6CA99AC1BDF21DC0069C052 /* LaunchScreen.storyboard */,
@@ -325,6 +330,7 @@
 				B69354471BE05DF200B0CCF0 /* StartCamera.m in Sources */,
 				B6D0CDB91BDF4F400046C7F0 /* FavoritesTableViewController.m in Sources */,
 				B60977C21BE0AEDF003A5CB3 /* CameraOverlayViewController.m in Sources */,
+				B631B2591BE0CC28004AF916 /* CameraAvFoundation.m in Sources */,
 				B6CA99A01BDF21DC0069C052 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

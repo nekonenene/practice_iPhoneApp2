@@ -10,24 +10,35 @@
 
 @implementation CameraOverlayViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (IBAction)testButtonTapped:(id)sender
+{
+    NSLog(@"button tapped!");
+}
+
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [self initWithFrame:frame] ;
+    if (self)
+    {
+        UINib *nib = [UINib nibWithNibName:@"CameraOverlayView" bundle:[NSBundle mainBundle]] ;
+        self = [nib instantiateWithOwner:self options:nil][0] ;
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

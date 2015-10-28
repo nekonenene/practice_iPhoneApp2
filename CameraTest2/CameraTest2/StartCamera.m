@@ -29,17 +29,8 @@
 }
  */
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [self initWithFrame:frame];
-//    if (self) {
-//        UINib *nib = [UINib nibWithNibName:@"OverlayView" bundle:[NSBundle mainBundle]];
-//        self = [nib instantiateWithOwner:self options:nil][0];
-//    }
-    return self;
-}
 
-- (IBAction)showcameraController
+- (IBAction)showCameraController
 {
     [self takePicture:imagePicker usingDelegate:self] ;
 }
@@ -67,7 +58,7 @@
             
             cameraController.showsCameraControls = NO ; // オーバーレイさせるので、写真を撮るためのボタンは隠す
         
-            // UIImageView *overlayView = [[UIImageView alloc] initWithImage:self] ;
+            // CameraOverlayViewController *overlayView = [[CameraOverlayViewController alloc] initWithFrame:cameraController.view.frame] ;
             // cameraController.cameraOverlayView = overlayView ;
             
             [self presentViewController:cameraController animated:YES completion:nil] ; // カメラから画像を選ぶ

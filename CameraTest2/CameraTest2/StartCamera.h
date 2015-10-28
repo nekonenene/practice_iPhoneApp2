@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "CameraOverlayViewController.h"
 
-@interface StartCamera : ViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface StartCamera : CameraOverlayViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property UIImagePickerController *imagePicker ;
 @property UIView *mainCameraView ;
