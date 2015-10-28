@@ -23,7 +23,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     tableView.backgroundColor = [UIColor blueColor] ;
-    NSLog(@"セルの数は %d\n", tableView.numberOfSections ) ;
+    NSLog(@"セルの数は %ld\n", (long)tableView.numberOfSections ) ;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,12 +34,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+// #warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+// #warning Incomplete implementation, return the number of rows
     return 0;
 }
 

@@ -12,32 +12,42 @@
 
 @synthesize imagePicker ;
 @synthesize mainCameraView ;
+@synthesize startCameraButton ;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self takePicture] ;
+}
+
+- (IBAction)showcameraController
+{
+    [self takePicture:imagePicker usingDelegate:self] ;
 }
 
 #pragma mark Camera
 
 /* カメラを起動 */
-- (BOOL)takePicture
+- (BOOL)takePicture :(UIViewController *)controller
+      usingDelegate :(id <UIImagePickerControllerDelegate, UINavigationControllerDelegate>)thisDelegate
 {
     @autoreleasepool
     {
+        // メタデータ識別用のオブジェクト
+        // AVCaptureMetadataOutput *metaOutput = [ [AVCaptureMetadataOutput alloc] init ] ;
+
         /* カメラを利用できるかどうかチェックする */
         if( [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] )
-        {
-            // UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init] ;
-            // imagePickerController.delegate = self ;
-            imagePicker.delegate = self ; // UIImagePickerControllerDelegate のデリゲートになる
-            imagePicker.allowsEditing = NO ; // 撮影後に写真の編集を行わない
-            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera ; // カメラから画像を取り込む設定にする
+        {            
+            UIImagePickerController *cameraController = [[UIImagePickerController alloc] init] ;
             
-            [self presentViewController:imagePicker animated:YES completion:nil] ; // カメラから画像を選ぶ
+            // 写真の移動と拡大縮小、またはムービーのトリミングのためのコントロールを隠す。代わりにコントロールを表示するには、YESを使用する。
+            cameraController.allowsEditing = NO ;
+            cameraController.delegate = thisDelegate ;
+            cameraController.sourceType = UIImagePickerControllerSourceTypeCamera ; // カメラから画像を取り込む設定にする
+            
+            [self presentViewController:cameraController animated:YES completion:nil] ; // カメラから画像を選ぶ
             NSLog(@"カメラが起動されました") ;
-            return true ;
+            return YES ;
         }
         else
         {
@@ -45,7 +55,7 @@
              dispatch_async(
              dispatch_get_main_queue(),
              ^{
-             [ [ [UIAlertView alloc] initWithTitle:@"シミュレータではカメラは起動できません"
+             [ [ [UIAlertView alloc] initWithTitle:@"この端末ではではカメラは起動できません"
              message:@"撮影できません"
              delegate:nil
              cancelButtonTitle:@"OK"
@@ -54,24 +64,24 @@
              ) ;
              */
             UIAlertView *alert = [ [UIAlertView alloc] initWithTitle:@"エラー"
-                                                             message:@"カメラを起動できません"
+                                                             message:@"この端末ではカメラを起動できません"
                                                             delegate:nil
                                                    cancelButtonTitle:@"OK"
                                                    otherButtonTitles:nil ] ;
             [alert show] ;
             NSLog(@"カメラは起動されませんでした") ;
-            return false ;
+            return NO ;
         }
     }
 }
 
-/*「キャンセル」された場合のデリゲートメソッド */
+/*「キャンセル」された場合のデリゲートメソッド
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:YES completion:nil] ;
 }
 
-/*「写真を使用」の場合のデリゲートメソッド */
+「写真を使用」の場合のデリゲートメソッド
 - (void)imagePickerController:(UIImagePickerController *)picker
         didFinishPickingImage:(UIImage *)image
                   editingInfo:(NSDictionary *)editingInfo
@@ -80,7 +90,7 @@
     // image --> 撮影された画像, editingInfo --> 編集内容
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

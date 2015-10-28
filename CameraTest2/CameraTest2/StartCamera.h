@@ -7,10 +7,14 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface StartCamera : ViewController
+@interface StartCamera : ViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property UIImagePickerController *imagePicker ;
+// @property UIImagePickerController *imagePickerController ;
 @property UIView *mainCameraView ;
+
+@property UIButton *startCameraButton ;
 
 @end
