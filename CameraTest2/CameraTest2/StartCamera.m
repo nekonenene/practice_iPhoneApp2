@@ -19,6 +19,14 @@
     // Do any additional setup after loading the view.
 }
 
+/* 画面移動ですぐにカメラ起動。ただし、これだとカメラ画面から戻れなくなる
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self takePicture:imagePicker usingDelegate:self] ;
+ // viewDidLoad 内に書くと、Error : whose view is not in the window hierarchy uiimagepicker
+}
+ */
+
 - (IBAction)showcameraController
 {
     [self takePicture:imagePicker usingDelegate:self] ;
