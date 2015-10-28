@@ -14,6 +14,8 @@
 @synthesize mainCameraView ;
 @synthesize startCameraButton ;
 
+@synthesize cameraOverlayView ;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -26,6 +28,16 @@
  // viewDidLoad 内に書くと、Error : whose view is not in the window hierarchy uiimagepicker
 }
  */
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [self initWithFrame:frame];
+//    if (self) {
+//        UINib *nib = [UINib nibWithNibName:@"OverlayView" bundle:[NSBundle mainBundle]];
+//        self = [nib instantiateWithOwner:self options:nil][0];
+//    }
+    return self;
+}
 
 - (IBAction)showcameraController
 {
@@ -52,6 +64,11 @@
             cameraController.allowsEditing = NO ;
             cameraController.delegate = thisDelegate ;
             cameraController.sourceType = UIImagePickerControllerSourceTypeCamera ; // カメラから画像を取り込む設定にする
+            
+            cameraController.showsCameraControls = NO ; // オーバーレイさせるので、写真を撮るためのボタンは隠す
+        
+            // UIImageView *overlayView = [[UIImageView alloc] initWithImage:self] ;
+            // cameraController.cameraOverlayView = overlayView ;
             
             [self presentViewController:cameraController animated:YES completion:nil] ; // カメラから画像を選ぶ
             NSLog(@"カメラが起動されました") ;

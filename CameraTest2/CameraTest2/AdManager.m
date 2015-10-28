@@ -16,7 +16,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad] ;
-    // Do any additional setup after loading the view, typically from a nib.
     [self bannerInit :adBottom] ; // viewDidAppear 内に書くと、カメラから戻るときにアドが初期化で消えてしまうのでココ！！
 }
 

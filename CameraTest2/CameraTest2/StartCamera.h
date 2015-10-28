@@ -8,14 +8,13 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "AdManager.h"
 
 @interface StartCamera : ViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property UIImagePickerController *imagePicker ;
-// @property UIImagePickerController *imagePickerController ;
 @property UIView *mainCameraView ;
-
 @property UIButton *startCameraButton ;
+
+@property(nonatomic,retain) UIView *cameraOverlayView ;
 
 @end
