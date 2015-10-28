@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AdManager.h"
 
 @interface StartCamera : ViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 

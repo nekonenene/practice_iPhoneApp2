@@ -12,17 +12,21 @@
 @synthesize adBottom ;
 
 #pragma mark SetUp
-- (void)viewDidLoad {
+/* Load 時に実行されるが、dismiss などで戻ってきた場合は読み込まれない */
+- (void)viewDidLoad
+{
     [super viewDidLoad] ;
     // Do any additional setup after loading the view, typically from a nib.
+    [self bannerInit :adBottom] ; // viewDidAppear 内に書くと、カメラから戻るときにアドが初期化で消えてしまうのでココ！！
 }
 
+/* iAd Container が表示されるたびに実行される */
 - (void)viewDidAppear:(BOOL)animated
 {
     @autoreleasepool
     {
+        adBottom.delegate = self ;
         self.view.superview.backgroundColor = [UIColor clearColor] ; // コンテナーの背景を透明に
-        [self bannerInit :adBottom] ;
         [super viewDidAppear:animated] ;
     }
 }

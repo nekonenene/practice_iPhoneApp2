@@ -330,6 +330,7 @@
                     </view>
                     <connections>
                         <outlet property="adBottom" destination="aH4-JG-R26" id="zvH-dk-rgi"/>
+                        <segue destination="WAx-O4-h1Q" kind="show" id="wMj-YO-WNx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8Y-Ta-Wma" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,4 +537,7 @@
         <image name="Camera3_5_2x.png" width="50" height="50"/>
         <image name="Recommend_3_2x.png" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wMj-YO-WNx"/>
+    </inferredMetricsTieBreakers>
 </document>
