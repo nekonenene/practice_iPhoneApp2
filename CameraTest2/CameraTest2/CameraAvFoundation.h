@@ -9,11 +9,13 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface CameraAvFoundation : UIViewController
+@interface CameraAvFoundation : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInput ;
 @property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput ;
 @property (strong, nonatomic) AVCaptureSession *session ;
 @property (strong, nonatomic) UIView *previewView ;
+@property(nonatomic, readonly) NSArray *availableMetadataObjectTypes ;
+
 
 @end
