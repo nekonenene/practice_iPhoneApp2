@@ -283,7 +283,7 @@
             <objects>
                 <tabBarController id="QNf-FB-ZA9" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="RTH-By-CDM">
+                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" id="RTH-By-CDM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>

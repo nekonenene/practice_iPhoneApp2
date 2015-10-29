@@ -15,25 +15,28 @@
     [super viewDidLoad];
     
     // 撮影ボタンを配置したツールバーを生成
+    /*
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     
     UIBarButtonItem *takePhotoButton = [[UIBarButtonItem alloc] initWithTitle:@"撮影"
-                                                                        style:UIBarButtonItemStyleBordered
+                                                                        style:UIBarButtonItemStylePlain
                                                                        target:self
                                                                        action:@selector(takePhoto:)];
     toolbar.items = @[takePhotoButton];
     [self.view addSubview:toolbar];
+     */
     
     // プレビュー用のビューを生成
     self.previewView = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                toolbar.frame.size.height,
+                                                                /*toolbar.frame.size.height*/ 0,
                                                                 self.view.bounds.size.width,
-                                                                self.view.bounds.size.height - toolbar.frame.size.height)];
+                                                                self.view.bounds.size.height /* - toolbar.frame.size.height */ )];
     [self.view addSubview:self.previewView];
     
     // 撮影開始
     [self setupAVCapture];
 }
+
 
 - (void)setupAVCapture
 {
