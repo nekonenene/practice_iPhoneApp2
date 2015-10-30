@@ -8,6 +8,20 @@
 
 #import "ViewController.h"
 
-@interface BottomContainerController : ViewController
+@class SampleDelegate ;
+
+#pragma mark protocol
+@protocol SampleDelegate <NSObject>
 
 @end
+
+
+#pragma maek interface
+@interface BottomContainerController : ViewController
+
+- (IBAction)testMethod:(id)sender ;
+
+@property (nonatomic, weak) id<SampleDelegate> delegate;
+
+@end
+

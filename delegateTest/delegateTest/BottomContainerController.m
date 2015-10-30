@@ -20,4 +20,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)testMethod:(id)sender
+{
+    NSLog(@"押されました") ;
+    stringLabel.text = @"nyao" ;
+}
 @end
