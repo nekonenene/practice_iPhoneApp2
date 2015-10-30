@@ -15,6 +15,8 @@
 		B6477D531BE3700300768CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6477D511BE3700300768CC1 /* LaunchScreen.storyboard */; };
 		B6477D5E1BE3700300768CC1 /* delegateTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6477D5D1BE3700300768CC1 /* delegateTestTests.m */; };
 		B6477D691BE3700400768CC1 /* delegateTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6477D681BE3700400768CC1 /* delegateTestUITests.m */; };
+		B6477D781BE3735500768CC1 /* TopContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6477D771BE3735500768CC1 /* TopContainerController.m */; settings = {ASSET_TAGS = (); }; };
+		B6477D7B1BE3736A00768CC1 /* BottomContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6477D7A1BE3736A00768CC1 /* BottomContainerController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		B6477D641BE3700400768CC1 /* delegateTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = delegateTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6477D681BE3700400768CC1 /* delegateTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = delegateTestUITests.m; sourceTree = "<group>"; };
 		B6477D6A1BE3700400768CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6477D761BE3735500768CC1 /* TopContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopContainerController.h; sourceTree = "<group>"; };
+		B6477D771BE3735500768CC1 /* TopContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopContainerController.m; sourceTree = "<group>"; };
+		B6477D791BE3736A00768CC1 /* BottomContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomContainerController.h; sourceTree = "<group>"; };
+		B6477D7A1BE3736A00768CC1 /* BottomContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomContainerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				B6477D471BE3700300768CC1 /* AppDelegate.m */,
 				B6477D491BE3700300768CC1 /* ViewController.h */,
 				B6477D4A1BE3700300768CC1 /* ViewController.m */,
+				B6477D761BE3735500768CC1 /* TopContainerController.h */,
+				B6477D771BE3735500768CC1 /* TopContainerController.m */,
+				B6477D791BE3736A00768CC1 /* BottomContainerController.h */,
+				B6477D7A1BE3736A00768CC1 /* BottomContainerController.m */,
 				B6477D4C1BE3700300768CC1 /* Main.storyboard */,
 				B6477D4F1BE3700300768CC1 /* Assets.xcassets */,
 				B6477D511BE3700300768CC1 /* LaunchScreen.storyboard */,
@@ -272,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6477D4B1BE3700300768CC1 /* ViewController.m in Sources */,
+				B6477D781BE3735500768CC1 /* TopContainerController.m in Sources */,
+				B6477D7B1BE3736A00768CC1 /* BottomContainerController.m in Sources */,
 				B6477D481BE3700300768CC1 /* AppDelegate.m in Sources */,
 				B6477D451BE3700300768CC1 /* main.m in Sources */,
 			);
