@@ -12,8 +12,6 @@
 @interface ViewController : UIViewController
 {
 @protected
-    IBOutlet UILabel  *stringLabel ;
-    IBOutlet UIButton *button ;
     
     IBOutlet UIView *topView ;
     IBOutlet UIView *bottomView ;

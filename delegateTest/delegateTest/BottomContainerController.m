@@ -9,7 +9,7 @@
 #import "BottomContainerController.h"
 
 @implementation BottomContainerController
-@synthesize delegate ;
+@synthesize button ;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,24 +21,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)callPartnerMethod
-{
-    // デリゲートメソッドを呼び出す
-    if( [ self.delegate respondsToSelector:@selector(setLabelString:) ] ) // ちゃんと配信先がメソッドを持っているか確認
-    {
-        NSLog(@"デリゲートメソッドを呼び出します TopContainerController.h 内の testMethod を呼び出す") ;
-        [self.delegate setLabelString:@"nnn"] ;
-    }
-    else
-    {
-        NSLog(@"デリゲートメソッドを呼び出せませんでした") ;
-    }
-    [self.delegate test] ;
-}
-
 - (IBAction)buttonAction:(id)sender
 {
     NSLog(@"押されました") ;
-    [self callPartnerMethod] ;
 }
 @end

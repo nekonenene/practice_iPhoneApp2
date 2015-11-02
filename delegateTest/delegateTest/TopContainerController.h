@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "BottomContainerController.h"
 
 #pragma maek interface
-@interface TopContainerController : ViewController<BottomContainerControllerDelegate>
+@interface TopContainerController : ViewController
+@property IBOutlet UILabel  *stringLabel ;
+
+- (void)setLabelString:(NSString *)string ;
 
 @end
 

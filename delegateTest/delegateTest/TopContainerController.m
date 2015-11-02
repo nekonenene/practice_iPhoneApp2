@@ -9,16 +9,12 @@
 #import "TopContainerController.h"
 
 @implementation TopContainerController
+@synthesize stringLabel ;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    // デリゲートを実装する : BottomContainerController クラスを送信元として設定
-    BottomContainerController *bottomController = [[BottomContainerController alloc] init] ;
-    bottomController.delegate = self ;
-    /*[bottomController callPartnerMethod] ;*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,11 +29,5 @@
     NSLog(@"success") ;
     stringLabel.text = string ;
 }
-
-- (void)test
-{
-    NSLog(@"success2") ;
-}
-
 
 @end
