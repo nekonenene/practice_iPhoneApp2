@@ -24,5 +24,15 @@
 - (IBAction)buttonAction:(id)sender
 {
     NSLog(@"押されました") ;
+    [self postNotification] ;
+}
+
+- (void)postNotification
+{
+    NSDictionary *sendInfo = [[NSDictionary alloc] initWithObjectsAndKeys:@"Hi !!", @"string", @"testData", @"testKey", nil ] ;
+    NSNotificationCenter *nsnc = [NSNotificationCenter defaultCenter] ;
+    
+    // 通知してみる
+    [nsnc postNotificationName:@"TestPost" object:self userInfo:sendInfo] ;
 }
 @end

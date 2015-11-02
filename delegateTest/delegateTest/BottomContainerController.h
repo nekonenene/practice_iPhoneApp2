@@ -13,4 +13,6 @@
 
 - (IBAction)buttonAction:(id)sender ;
 
+- (void)postNotification ;
+
 @end
