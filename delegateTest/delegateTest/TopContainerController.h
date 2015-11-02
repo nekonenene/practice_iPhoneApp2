@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "BottomContainerController.h"
 
-@interface TopContainerController : ViewController
+#pragma maek interface
+@interface TopContainerController : ViewController<BottomContainerControllerDelegate>
 
 @end
+

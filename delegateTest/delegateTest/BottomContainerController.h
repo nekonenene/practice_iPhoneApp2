@@ -8,20 +8,23 @@
 
 #import "ViewController.h"
 
-@class SampleDelegate ;
+@class BottomContainerController ;
 
-#pragma mark protocol
-@protocol SampleDelegate <NSObject>
+@protocol BottomContainerControllerDelegate <NSObject>
+
+@optional
+
+- (void)setLabelString:(NSString *)string ;
+
+- (void)test ;
 
 @end
 
 
-#pragma maek interface
 @interface BottomContainerController : ViewController
 
-- (IBAction)testMethod:(id)sender ;
-
-@property (nonatomic, weak) id<SampleDelegate> delegate;
+- (IBAction)buttonAction:(id)sender ;
+- (void)callPartnerMethod ;
+@property (nonatomic, weak) id<BottomContainerControllerDelegate> delegate ;
 
 @end
-

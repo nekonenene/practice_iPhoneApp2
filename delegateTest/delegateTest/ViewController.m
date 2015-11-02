@@ -14,6 +14,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"起動しました %@", self.description ) ;
 }
 
 - (void)didReceiveMemoryWarning

@@ -62,8 +62,11 @@
         <!--TOP-->
         <scene sceneID="osE-zt-2Ty">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cuC-sZ-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="TOP" id="BhV-3E-UDe" customClass="TopContainerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CWK-zG-6BS"/>
+                        <viewControllerLayoutGuide type="bottom" id="cOh-Pt-hbB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YgX-BW-nJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="301"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +94,7 @@
                         <outlet property="stringLabel" destination="JuD-Me-j28" id="Dja-TL-guJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuC-sZ-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825" y="316.5"/>
         </scene>
@@ -98,6 +102,10 @@
         <scene sceneID="7QC-7B-h62">
             <objects>
                 <viewController title="BOTTOM" id="kNP-DA-O8D" customClass="BottomContainerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cN1-kK-5fR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fJi-F3-j7d"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k7C-UO-M1L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Push me!"/>
                                 <connections>
-                                    <action selector="testMethod:" destination="kNP-DA-O8D" eventType="touchDown" id="kbB-DD-hrg"/>
+                                    <action selector="buttonAction:" destination="kNP-DA-O8D" eventType="touchDown" id="d7X-Ez-eVV"/>
                                 </connections>
                             </button>
                         </subviews>
